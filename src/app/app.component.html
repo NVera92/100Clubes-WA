@@ -1,51 +1,17 @@
-<html>
-
 <body class="is-preload">
 
 	<!-- Wrapper -->
 	<div id="wrapper">
 
 		<app-navbar></app-navbar>
+
 		<!-- Main -->
 		<div id="main">
-
 			<!-- Introduction -->
 			<section id="intro" class="main">
-				<div class="spotlight">
-					<div class="content">
-						<header class="major">
-							<h2>Ipsum sed adipiscing</h2>
-						</header>
-						<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-							adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-							Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</div>
-					<span class="image"><img src="/assets/images/pic01.jpg" alt="" /></span>
-				</div>
+				<router-outlet></router-outlet>
 			</section>
-
-			<!-- First Section -->
-			<section id="first" class="main special">
-				<app-searcher></app-searcher>
-			</section>
-
-			<!-- Map Started -->
-
-			<section id="cta" class="main special">
-				<app-map></app-map>
-			</section>
-
-			<!-- Get Started -->
-			<!-- Stats Section -->
-			<section id="second" class="main special">
-				<app-stats></app-stats>
-			</section>
-
 		</div>
-
 		<!-- Footer -->
 		<footer id="footer">
 			<app-dev-info></app-dev-info>
@@ -65,5 +31,3 @@
 	<script src="/assets/js/main.js"></script>
 
 </body>
-
-</html>
