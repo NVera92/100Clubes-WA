@@ -14,6 +14,9 @@ import { NeighborhoodComponent } from './neighborhood/neighborhood.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { ActiveComponent } from './active/active.component';
 import { InactiveComponent } from './inactive/inactive.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 
 const routes: Routes = [
   {path: 'barrio',component: NeighborhoodComponent},
@@ -35,12 +38,16 @@ const routes: Routes = [
     SearcherComponent,
     ActivitiesComponent,
     ActiveComponent,
-    InactiveComponent
+    InactiveComponent,
+    NeighborhoodComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    FormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
