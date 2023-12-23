@@ -8,6 +8,7 @@
             <li>
                 <form>
                     <select name="opt" [(ngModel)]="idCapturated">
+                        <option class="dropdown-item" disabled selected value="undefined">Seleccione un Barrio</option>
                         <option [value]="aux.idBarrio" *ngFor="let aux of neighColection">{{aux.nombreBarrio}}</option>
                     </select>
                 </form>
@@ -15,11 +16,11 @@
         </ul>
         <footer class="major">
             <ul class="actions special">
-                <li><a class="button" (click)="searchByNeighborhood(idCapturated)" >Buscar</a></li>
+                <li><a class="button" (click)="searchByNeighborhood(idCapturated)">Buscar</a></li>
             </ul>
         </footer>
 
-        <div>
+        <div *ngIf="!show; else error">
             <table>
                 <tbody>
                   <tr *ngFor="let item of clubColection">
@@ -37,9 +38,5 @@
 </div>
 
 <ng-template #error>
-    <p>Nada para mostrar</p>
-</ng-template>
-
-<ng-template #modal>
-    <p>Hola soy Modal</p>
+    <p>Parece que en este barrio, no tenemos clubes registrados... Prueba otro barrio!!</p>
 </ng-template>

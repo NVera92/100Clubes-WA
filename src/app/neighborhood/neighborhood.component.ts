@@ -39,10 +39,14 @@ export class NeighborhoodComponent implements OnInit {
   }
 
   searchByNeighborhood(id: number) {
+    this.show = false;
     this.apiManager.getClubByNeighborhood(id).subscribe({
       next: (data) => {
         this.apiManager.data = data as ViewStruct;
         this.clubColection = this.apiManager.data;
+        if(this.clubColection.length == 0){
+          this.show = true;
+        }
       }
     })
   }
@@ -55,7 +59,7 @@ export class NeighborhoodComponent implements OnInit {
         let f = new Date(this.club[0].fechaFundacion)
         Swal.fire({
           title: this.club[0].nombre,
-          html: "Fundado el "+f.getDay()+'/'+f.getMonth()+'/'+f.getFullYear()+" <br/>"+"Actividades: " +this.club[0].actividades+' <br/> Colores: '+this.club[0].colores+' <br/>Ubicacíon Sede: '+this.club[0].ubicacionSede,
+          html: "Fundado el "+f.getDate()+'/'+(f.getMonth()+1)+'/'+f.getFullYear()+" <br/>"+"Actividades: " +this.club[0].actividades+' <br/> Colores: '+this.club[0].colores+' <br/>Ubicacíon Sede: '+this.club[0].ubicacionSede,
           imageUrl: "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=j50oPVIu0jjz7-aASgQQ9g&cb_client=search.gws-prod.gps&w=408&h=240&yaw=302.12872&pitch=0&thumbfov=100",
           imageWidth: 400,
           imageHeight: 200,
