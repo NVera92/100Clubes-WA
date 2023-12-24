@@ -60,7 +60,7 @@ export class NeighborhoodComponent implements OnInit {
         Swal.fire({
           title: this.club[0].nombre,
           html: "Fundado el "+f.getDate()+'/'+(f.getMonth()+1)+'/'+f.getFullYear()+" <br/>"+"Actividades: " +this.club[0].actividades+' <br/> Colores: '+this.club[0].colores+' <br/>Ubicacíon Sede: '+this.club[0].ubicacionSede,
-          imageUrl: "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=j50oPVIu0jjz7-aASgQQ9g&cb_client=search.gws-prod.gps&w=408&h=240&yaw=302.12872&pitch=0&thumbfov=100",
+          imageUrl: this.club[0].ubicacion,
           imageWidth: 400,
           imageHeight: 200,
           imageAlt: "Custom image",

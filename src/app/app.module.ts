@@ -1,6 +1,5 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -11,16 +10,15 @@ import { MapComponent } from './map/map.component';
 import { SearcherComponent } from './searcher/searcher.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NeighborhoodComponent } from './neighborhood/neighborhood.component';
-import { ActivitiesComponent } from './activities/activities.component';
 import { ActiveComponent } from './active/active.component';
 import { InactiveComponent } from './inactive/inactive.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const routes: Routes = [
   {path: 'barrio',component: NeighborhoodComponent},
-  {path: 'actividades',component: ActivitiesComponent},
   {path: 'inactivos', component: InactiveComponent},
   {path: 'activos',component: ActiveComponent},
   {path: 'mapa',component: MapComponent},
@@ -36,10 +34,9 @@ const routes: Routes = [
     DevInfoComponent,
     MapComponent,
     SearcherComponent,
-    ActivitiesComponent,
     ActiveComponent,
     InactiveComponent,
-    NeighborhoodComponent
+    NeighborhoodComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +44,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HttpClientModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

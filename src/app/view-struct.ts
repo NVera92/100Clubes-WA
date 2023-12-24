@@ -3,6 +3,7 @@ export interface ViewStruct {
     colores:string;
     fechaFundacion:Date;
     ubicacionSede:string;
+    ubicacion: string,
     actividades:string;
 }
 
