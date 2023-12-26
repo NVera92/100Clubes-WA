@@ -41,4 +41,66 @@ getClubById(id:number) :Observable<any>{
   return this.http.get<any>(url,httpOptions);
 }
 
+
+getCountClub() : Observable<any>{
+  const url = 'http://localhost:9000/100clubes/clubes';
+  const httpOptions = {
+    headers : new HttpHeaders({
+      'Content-Type': 'aplication/json'
+    })
+  }
+  return this.http.get<any>(url,httpOptions);
+}
+
+
+getCountNeighborhood() : Observable<any>{
+  const url = 'http://localhost:9000/100clubes/barrios';
+  const httpOptions = {
+    headers : new HttpHeaders({
+      'Content-Type': 'aplication/json'
+    })
+  }
+  return this.http.get<any>(url,httpOptions);
+}
+
+getCountActiveClubs() : Observable<any>{
+  const url = 'http://localhost:9000/100clubes/activos';
+  const httpOptions = {
+    headers : new HttpHeaders({
+      'Content-Type': 'aplication/json'
+    })
+  }
+  return this.http.get<any>(url,httpOptions);
+}
+
+
+getCountInactiveClubs() : Observable<any>{
+  const url = 'http://localhost:9000/100clubes/inactivos';
+  const httpOptions = {
+    headers : new HttpHeaders({
+      'Content-Type': 'aplication/json'
+    })
+  }
+  return this.http.get<any>(url,httpOptions);
+}
+
+getInactiveClubs() : Observable<any>{
+  const url = 'http://localhost:9000/100clubes/inactivo';
+  const httpOptions = {
+    headers : new HttpHeaders({
+      'Content-Type': 'aplication/json'
+    })
+  }
+  return this.http.get<any>(url,httpOptions);
+}
+
+getActiveClubs() : Observable<any>{
+  const url = 'http://localhost:9000/100clubes/activo';
+  const httpOptions = {
+    headers : new HttpHeaders({
+      'Content-Type': 'aplication/json'
+    })
+  }
+  return this.http.get<any>(url,httpOptions);
+}
 }
