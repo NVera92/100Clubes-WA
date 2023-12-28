@@ -8,7 +8,7 @@
         <table>
             <tbody>
               <tr *ngFor="let item of activeClubs">
-                <td><a (click)="showClubById(item.idClub)">{{item.nombre}}</a></td>
+                <td style="cursor: pointer;" (click)="showClubById(item.idClub)">{{item.nombre}}</td>
               </tr>
             </tbody>
           </table>
