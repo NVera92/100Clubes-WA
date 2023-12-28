@@ -1,0 +1,17 @@
+<div>
+    <section id="first" class="main special">
+    <header class="major">
+        <h2>Los que resisten al tiempo</h2>
+    </header>
+
+    <div>
+        <table>
+            <tbody>
+              <tr *ngFor="let item of activeClubs">
+                <td style="cursor: pointer;" (click)="showClubById(item.idClub)">{{item.nombre}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    </section>
+</div>
